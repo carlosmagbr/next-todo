@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-full w-full bg-black bg-cover bg-center" style={{ backgroundImage: `url('/bg.png')` }}>
+    <div className="h-full w-full bg-black bg-cover bg-center relative" style={{ backgroundImage: `url('/bg.png')` }}>
       <div className="bg-blue-700/30 absolute top-0 left-0 w-full h-full"></div>
       <div className="bg-opacity-60 backdrop-blur-3xl bg-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  mx-auto max-w-screen-lg p-10 rounded-lg max-h-96 w-11/12 " >
         <h1 className="text-3xl text-white text-center pb-6">Lista de Tarefas</h1>
