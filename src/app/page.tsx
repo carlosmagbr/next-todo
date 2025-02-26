@@ -65,7 +65,7 @@ export default function Home() {
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
-        <ul className="my-10 overflow-y-auto max-h-52">
+        <ul className="my-10 overflow-y-auto md:max-h-40 max-h-40 ">
           {tasks.map((t) => (
             <li className="flex justify-between border-b border-white mb-3 pb-1" key={t.id} >
               <p className="text-xl text-white capitalize" style={{ textDecoration: t.completed ? "line-through" : "none" }}>
