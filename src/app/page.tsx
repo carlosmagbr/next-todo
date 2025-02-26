@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <div className="py-32  h-screen w-full bg-black bg-cover bg-center" style={{ backgroundImage: `url('/bg.png')` }}>
+    <div className="h-full w-full bg-black bg-cover bg-center" style={{ backgroundImage: `url('/bg.png')` }}>
       <div className="bg-blue-700/30 absolute top-0 left-0 w-full h-full"></div>
       <div className="bg-opacity-60 backdrop-blur-3xl bg-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  mx-auto max-w-screen-lg p-10 rounded-lg max-h-96 w-11/12 " >
         <h1 className="text-3xl text-white text-center pb-6">Lista de Tarefas</h1>
@@ -67,21 +67,19 @@ export default function Home() {
         </div>
         <ul className="my-10 overflow-y-auto max-h-52">
           {tasks.map((t) => (
-            <>
-              <li className="flex justify-between border-b border-white mb-3 pb-1" key={t.id} >
-                <p className="text-xl text-white capitalize" style={{ textDecoration: t.completed ? "line-through" : "none" }}>
-                  {t.text}
-                </p>
-                <div className="text-xl flex gap-4">
-                  <button onClick={() => toggleTask(t.id)} className="text-white">
-                    <FontAwesomeIcon icon={faCheck} />
-                  </button>
-                  <button onClick={() => deleteTask(t.id)} className="text-red-700">
-                    <FontAwesomeIcon icon={faTrash} />
-                  </button>
-                </div>
-              </li>
-            </>
+            <li className="flex justify-between border-b border-white mb-3 pb-1" key={t.id} >
+              <p className="text-xl text-white capitalize" style={{ textDecoration: t.completed ? "line-through" : "none" }}>
+                {t.text}
+              </p>
+              <div className="text-xl flex gap-4">
+                <button onClick={() => toggleTask(t.id)} className="text-white">
+                  <FontAwesomeIcon icon={faCheck} />
+                </button>
+                <button onClick={() => deleteTask(t.id)} className="text-red-700">
+                  <FontAwesomeIcon icon={faTrash} />
+                </button>
+              </div>
+            </li>
           ))}
         </ul>
       </div>
